@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const loading = () => {
+function loading() {
   return (
-    <div>
-     <h1> Loading Comp </h1> 
-    </div>
+    <div>loading</div>
   )
 }
+
+export default loading
