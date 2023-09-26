@@ -5,7 +5,7 @@ import { Input } from './input'
 function SearchForm() {
     return (
         <form className='flex-center mx-auto mt-10 w-full sm:-mt-10 sm:px-5'>
-            <label className="flex-center relative w-full max-w-3xl">
+            <label className="flex-center relative w-full max-w-3xl" htmlFor='search_inp'>
                 <Image
                     src="/magnifying-glass.svg"
                     className="absolute left-8"
@@ -17,6 +17,7 @@ function SearchForm() {
                     className="base-regular h-fit border-0 bg-black-400 py-6 pl-20 pr-8 text-white-800 !ring-0 !ring-offset-0 placeholder:text-white-800"
                     type="text"
                     placeholder="Search"
+                    id='search_inp'
                 />
             </label>
         </form>
