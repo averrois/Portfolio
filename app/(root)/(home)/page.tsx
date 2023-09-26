@@ -1,4 +1,4 @@
-import SearchForm from '@/components/ui/SearchForm'
+import SearchForm from '@/components/SearchForm'
 import React from 'react'
 
 const page = () => {

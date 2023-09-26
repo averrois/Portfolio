@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';  
 import Image from 'next/image'
-import { Input } from './input'
+import { Input } from './ui/input'
 
 function SearchForm() {
     const [search, setSearch] = useState<string>('')
