@@ -1,3 +1,4 @@
+import SearchForm from '@/components/ui/SearchForm'
 import React from 'react'
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
         <div className="flex-center relative min-h-[274px] w-full flex-col rounded-xl bg-banner bg-cover bg-center text-center">
           <h1 className="sm:heading1 heading2 mb-6 text-center text-white">Welcome To My Humble Portfolio</h1>
         </div>
+        <SearchForm />
       </section>
     </main>
   )
