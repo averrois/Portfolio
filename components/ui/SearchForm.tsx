@@ -1,8 +1,10 @@
+"use client";
+import { useState } from 'react';  
 import Image from 'next/image'
-import React from 'react'
 import { Input } from './input'
 
 function SearchForm() {
+    const [search, setSearch] = useState<string>('')
     return (
         <form className='flex-center mx-auto mt-10 w-full sm:-mt-10 sm:px-5'>
             <label className="flex-center relative w-full max-w-3xl" htmlFor='search_inp'>
@@ -18,6 +20,8 @@ function SearchForm() {
                     type="text"
                     placeholder="Search"
                     id='search_inp'
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                 />
             </label>
         </form>
