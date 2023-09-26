@@ -13,7 +13,15 @@ function Navbar() {
             height={40}
             alt='logo'
           />
-       </Link> 
+        </Link>
+        <Image 
+          src='/hamburger-menu.svg'
+          width={30}
+          height={30}
+          alt='Navbar Menu'
+          className='block md:hidden'
+        />
+
       </div>
     </nav>
   )
