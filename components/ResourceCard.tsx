@@ -8,13 +8,13 @@ interface Props {
   title: string;
   image: string;
   downloadNumber: number;
-  downloadLink: string;
+  demoLink: string;
 }
 
-const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props) => {
+const ResourceCard = ({ id, title, image, downloadNumber, demoLink }: Props) => {
   return (
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
-      <Link href={downloadLink} target="_blank">
+      <Link href={demoLink} target="_blank">
         <CardHeader className="flex-center flex-col gap-2.5 !p-0">
           <div className="h-fit w-full">
             <Image 
@@ -35,7 +35,7 @@ const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props)
           />
           {downloadNumber}
         </div>
-        <Link href={downloadLink} target="_blank" className="flex-center text-gradient_purple-blue body-semibold gap-1.5">
+        <Link href={demoLink} target="_blank" className="flex-center text-gradient_purple-blue body-semibold gap-1.5">
           Download Now
           <Image src="/arrow-blue.svg" width={13} height={10} alt="arrow" />
         </Link>
