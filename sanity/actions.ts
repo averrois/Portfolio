@@ -14,7 +14,7 @@ export const getResources = async (params: GetRecoucesParams) => {
     try {
         const resources = await readClient.fetch(
             groq`${buildQuery({
-                type: 'resoource',
+                type: 'resource',
                 query,
                 category,
                 page: parseInt(page),
