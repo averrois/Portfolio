@@ -1,4 +1,5 @@
 import Filters from '@/components/Filters'
+import ResourceCard from '@/components/ResourceCard'
 import SearchForm from '@/components/SearchForm'
 import { getResources } from '@/sanity/actions'
 import React from 'react'
@@ -33,7 +34,7 @@ const page = async () => {
                 id={resource._id}
                 image={resource.image}
                 downloadNumber={resource.views}
-                downloadLink={resource.downloadLink}
+                demoLink={resource.demoLink}
               />
             ))
           ) : (
