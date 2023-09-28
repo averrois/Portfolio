@@ -4,14 +4,12 @@ import { getResources } from '@/sanity/actions'
 import React from 'react'
 
 const page = async () => {
-  const resoruces = await getResources({
+  const resources = await getResources({
     query: '',
     category: '',
     page: '1'
   });
 
-  console.log(resoruces);
-  
 
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col">
@@ -22,6 +20,29 @@ const page = async () => {
         <SearchForm />
       </section>
       <Filters />
+
+      <section className="flex-center mt-6 w-full flex-col sm:mt-20">
+        Header
+
+        <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
+          {resources?.length > 0 ? (
+            resources.map((resource: any) => (
+              <ResourceCard
+                key={resource._id}
+                title={resource.title}
+                id={resource._id}
+                image={resource.image}
+                downloadNumber={resource.views}
+                downloadLink={resource.downloadLink}
+              />
+            ))
+          ) : (
+            <p className="body-regular text-white-400">
+              No resources found
+            </p>
+          )}
+        </div>
+      </section>
     </main>
   )
 }
